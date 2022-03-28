@@ -20,6 +20,7 @@
 # VS Code settings.json file : Git Bash의 기본 터미널 적용 명령어
 # Git Bash를 이용하여 Linux체제의 명령어도 실행가능
 
-
+# git bash 명령어
+1. git init : 내가 만든 local workspace에 .git 파일 생성 및 초기화
 
 
