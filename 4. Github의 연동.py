@@ -1,3 +1,6 @@
+from re import U
+
+
 Git과 Github
 
 1. Git에 원격 저장소 사용
@@ -53,3 +56,20 @@ git pull --rebase
 # 원격상의 내용이 잘못되어 로컬의 내용으로 강제로 맞출 때 사용
 
 git push --force # 협업 시 미리 합의 후 사용해야함
+
+4. 원격의 branch 다루기
+
+git push -u (원격주소이름) (브랜치명)
+git push --set-upstream (원격주소이름) (브랜치명) 
+# from-local 브랜치의 대상 브랜치를 정한 후 push까지 진행
+
+git branch : 로컬의 브랜치 모두 확인
+
+git branch --all : 로컬 및 원격의 브랜치들 모두 확인
+
+git fetch : 원격의 브랜치 받아오기
+
+git switch -t origin/from-remote
+# 원격의 브랜치를 받아옴과 동시에 같은 이름의 브랜치를 생성하고 서로 연결
+
+git push (원격주소이름) --delete (원격의 브랜치명)
