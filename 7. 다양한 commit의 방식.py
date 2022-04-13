@@ -49,5 +49,30 @@ git commit -v
 
 git stash : 특정 공간으로 현재 작업 이동
 
-git stash pop : 현재 내가 원하는 공간으로 이동
+git stash pop : 현재 내가 원하는 공간에 적용
 
+git stash -p : 원하는 것만 stash 가능
+
+git stash -m '(메세지)' : 어떤 부분이 
+
+git stash apply : 치워둔 마지막 항목(번호 없을 시) 적용 # 번호로 항목 지정 가능
+
+git stash drop : 치워둔 마지막 항목(번호 없을 시) 삭제 # 번호로 항목 지정 가능
+
+git stash pop :  치워둔 마지막 항목(번호 없을 시) 적용 및 삭제 # apply + drop
+
+git stash branch (브랜치명) : 새 브랜치를 생성하여 pop # 충돌사항 있을 경우 유용하다.
+
+git stash clear : 치워둔 모든 항목들 비우기
+
+4. commit 수정하기
+
+git commit --amend : commit message 변경 # 다른 파일 변경 후 입력 시 commit에 포함시키기 가능
+
+git commit --amend -a : add 명령어 없이 한번에 수행
+
+git commit --amend -m : 메시지 한 줄로 변경
+
+5. 과거 commit을 수정 삭제, 병합, 분할
+
+git rebase -i # 대상의 바로 이전 커밋
