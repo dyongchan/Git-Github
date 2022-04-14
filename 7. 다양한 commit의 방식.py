@@ -76,3 +76,18 @@ git commit --amend -m : 메시지 한 줄로 변경
 5. 과거 commit을 수정 삭제, 병합, 분할
 
 git rebase -i # 대상의 바로 이전 커밋
+
+'''
+p, pick : 커밋 그대로 두기
+r.reword : 커밋 메시지 변경
+e,edit : 수정을 위해 중지
+d,drop : 커밋 삭제
+s, squash : 이전 커밋에 합치기
+'''
+ex) 실습 수행
+git rebase -i 후
+1. r 명령어 : 커밋 메세지 변경
+2. d 명령어 : 커맛 삭제
+3. s 명령어 : 항목 합치기
+4. e 명령어 : 수정 시작 후
+git reset HEAD ~ / git rebase --continue : 변화들을 따로 스테이지 및 커밋 처리
